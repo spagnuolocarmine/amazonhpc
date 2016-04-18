@@ -39,15 +39,8 @@ sudo easy_install StarCluster
 
 mkdir ~/.starcluster
 
-#python -c 'from starcluster.templates import config;from os.path import expanduser;f=open(expanduser("~")+"/.starcluster/config","w");f.write(config.config_template);f.close()'
-#chmod 600 ~/.starcluster/config
-
 rm -f ~/.starcluster/config
-wget -P ~/.starcluster/ https://raw.githubusercontent.com/isislab-unisa/amazonhpc/master/install/cluster/config
-
-mkdir ~/.starcluster/plugins
-rm -f ~/.starcluster/plugins/dmason.py
-wget -P ~/.starcluster/plugins/ https://raw.githubusercontent.com/isislab-unisa/amazonhpc/master/install/cluster/plugins/hpc.py
+wget -P ~/.starcluster/ https://raw.githubusercontent.com/isislab-unisa/amazonhpc/master/config
 
 uncomment() {
     sed -i "s/^# $1/$1/g" ~/.starcluster/config
