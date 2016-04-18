@@ -186,7 +186,7 @@ VOLUMES = hpcdata
 [volume hpcdata]
 # attach vol-c9999999 to /home on master node and NFS-shre to worker nodes
 # create a volume and use the id to have NFS sharing
-VOLUME_ID = vol-3e78379c
+VOLUME_ID = vol-b5d9821d
 MOUNT_PATH = /home
 
 # Same volume as above, but mounts to different location
