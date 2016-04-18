@@ -183,8 +183,8 @@ MASTER_INSTANCE_TYPE = t2.micro
 # Sections starting with "volume" define your EBS volumes
 # [volume biodata]
 # attach vol-c9999999 to /home on master node and NFS-shre to worker nodes
-# VOLUME_ID = vol-c999999
-# MOUNT_PATH = /home
+ VOLUME_ID = vol-c999999
+ MOUNT_PATH = /home
 
 # Same volume as above, but mounts to different location
 # [volume biodata2]
