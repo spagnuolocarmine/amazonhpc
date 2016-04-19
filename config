@@ -183,7 +183,7 @@ MASTER_INSTANCE_TYPE = t2.micro
 # and configuring EBS volumes to be used with StarCluster:
 
 # Sections starting with "volume" define your EBS volumes
-[volume hpcdata]
+#[volume hpcdata]
 # attach vol-c9999999 to /home on master node and NFS-shre to worker nodes
 # create a volume and use the id to have NFS sharing
 #VOLUME_ID = vol-b5d9821d
