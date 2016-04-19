@@ -46,9 +46,6 @@ Connect through SSH to the "Controller" machine and run the installation script.
 ``` source hpc_starcluster_setup.sh```
 
 
-####How to change the size of the cluster?
-
-In the config file change the variable ```CLUSTER_SIZE ```.
 
 ### Start new cluster
 
@@ -57,6 +54,16 @@ In the config file change the variable ```CLUSTER_SIZE ```.
 ### Terminate star cluter 
 
 ``` startcluster terminate test ```
+
+
+####How to change the size of the cluster?
+
+In the config file change the variable ```CLUSTER_SIZE ```.
+
+
+####How many nodes could we run?
+
+This script use the t2.micro instance of EC2 eligible for free. In the section Limits you can see the maximum number of instances that is possible to run (default is 20). Is possible to require the limit increase to the Amazon support. With basic account you can use the t2.micro instance, but if you are student you can ask for some credits to run other kind of instances.
 
 ##### Some important command of startcluster are:
 
@@ -153,7 +160,8 @@ Open Grid Scheduler/Condor cheat sheet:
 
 5. Run the example
 
- ```root@master:~# mpirun -np 10 -host node001,node002 a.out 
+ ```
+ root@master:~# mpirun -np 10 -host node001,node002 a.out 
   Hello world from processor node001, rank 8 out of 10 processors
   Hello world from processor node001, rank 0 out of 10 processors
   Hello world from processor node002, rank 5 out of 10 processors
