@@ -3,7 +3,8 @@
 This project allows the user to easy install and start a HPC cluster on Amazon’s Elastic Compute Cloud (EC2).
 
 ##Requirements
-- Amazon AWS account https://console.aws.amazon.com/
+- Amazon AWS account (https://console.aws.amazon.com/)
+- Second user Amazon AWS with AmazonEC2FullAccess
 
 ##Each node are equipped with:
 
@@ -36,3 +37,35 @@ Open Grid Scheduler/Condor cheat sheet:
   * qsub/condor_submit - submit batch jobs (e.g. qsub -cwd ./job.sh)
   * qdel/condor_rm - delete batch jobs (e.g. qdel 7)
   * qconf - configure Open Grid Scheduler system
+
+
+###Basic Test installation
+
+    #include <mpi.h>
+    #include <stdio.h>
+    
+    int main(int argc, char** argv) {
+        // Initialize the MPI environment
+        MPI_Init(NULL, NULL);
+    
+        // Get the number of processes
+        int world_size;
+        MPI_Comm_size(MPI_COMM_WORLD, &world_size);
+    
+        // Get the rank of the process
+        int world_rank;
+        MPI_Comm_rank(MPI_COMM_WORLD, &world_rank);
+    
+        // Get the name of the processor
+        char processor_name[MPI_MAX_PROCESSOR_NAME];
+        int name_len;
+        MPI_Get_processor_name(processor_name, &name_len);
+    
+        // Print off a hello world message
+        printf("Hello world from processor %s, rank %d"
+               " out of %d processors\n",
+               processor_name, world_rank, world_size);
+    
+        // Finalize the MPI environment.
+        MPI_Finalize();
+    }
