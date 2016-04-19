@@ -48,7 +48,7 @@ Open Grid Scheduler/Condor cheat sheet:
 
 2. Create the file test.c
 
-    #include <mpi.h>
+    `#include <mpi.h>
     #include <stdio.h>
     int main(int argc, char** argv) {
         // Initialize the MPI environment
@@ -69,8 +69,8 @@ Open Grid Scheduler/Condor cheat sheet:
                processor_name, world_rank, world_size);
         // Finalize the MPI environment.
         MPI_Finalize();
-    }
-    `
+    }`
+    
 3. Compile the file test.c in test.out
 
  ` mpicc test.c -o test.out`
@@ -81,7 +81,7 @@ Open Grid Scheduler/Condor cheat sheet:
 
 5. Run the example
 
- ` root@master:~# mpirun -np 10 -host node001,node002 a.out 
+ `root@master:~# mpirun -np 10 -host node001,node002 a.out 
   Hello world from processor node001, rank 8 out of 10 processors
   Hello world from processor node001, rank 0 out of 10 processors
   Hello world from processor node002, rank 5 out of 10 processors
