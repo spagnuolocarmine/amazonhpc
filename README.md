@@ -43,11 +43,11 @@ Open Grid Scheduler/Condor cheat sheet:
 
 1. Connect to the master of the HPC cluster.
 
- starcluster sshmaster
+` starcluster sshmaster`
 
 
 2. Create the file test.c
-
+`
     #include <mpi.h>
     #include <stdio.h>
     
@@ -75,18 +75,18 @@ Open Grid Scheduler/Condor cheat sheet:
     
         // Finalize the MPI environment.
         MPI_Finalize();
-    }
+    }`
 3. Compile the file test.c in test.out
 
-  mpicc test.c -o test.out
+ ` mpicc test.c -o test.out`
 
 4. Copy on all nodes the file, your node are named from 000 to N, (e.g. 001, 002...) see the file /etc/hosts
  
-  scp test.out nodeX: 
+ ` scp test.out nodeX: `
 
 5. Run the example
 
-  root@master:~# mpirun -np 10 -host node001,node002 a.out 
+ ` root@master:~# mpirun -np 10 -host node001,node002 a.out 
   Hello world from processor node001, rank 8 out of 10 processors
   Hello world from processor node001, rank 0 out of 10 processors
   Hello world from processor node002, rank 5 out of 10 processors
@@ -96,4 +96,4 @@ Open Grid Scheduler/Condor cheat sheet:
   Hello world from processor node002, rank 3 out of 10 processors
   Hello world from processor node001, rank 2 out of 10 processors
   Hello world from processor node002, rank 9 out of 10 processors
-  Hello world from processor node002, rank 1 out of 10 processors
+  Hello world from processor node002, rank 1 out of 10 processors`
