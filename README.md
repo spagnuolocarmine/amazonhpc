@@ -41,6 +41,13 @@ Open Grid Scheduler/Condor cheat sheet:
 
 ###Basic Test installation
 
+1. Connect to the master of the HPC cluster.
+
+ starcluster sshmaster
+
+
+2. Create the file test.c
+
     #include <mpi.h>
     #include <stdio.h>
     
@@ -69,3 +76,7 @@ Open Grid Scheduler/Condor cheat sheet:
         // Finalize the MPI environment.
         MPI_Finalize();
     }
+3. Compile the file test.c in test.out
+ mpicc test.c -o test.out
+4. Copy on all nodes the file, your node are named from 000 to N, (e.g. 001, 002...) see the file /etc/hosts
+ scp test.out nodeX: 
