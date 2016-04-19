@@ -48,7 +48,6 @@ Open Grid Scheduler/Condor cheat sheet:
 
 2. Create the file test.c
 
-`
     #include <mpi.h>
     #include <stdio.h>
     int main(int argc, char** argv) {
