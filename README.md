@@ -118,10 +118,11 @@ Open Grid Scheduler/Condor cheat sheet:
 
 2. Create the file test.c
 
-```#include <mpi.h>
+```
+#include <mpi.h>
    #include <stdio.h>
    int main(int argc, char** argv) 
-   // Initialize the MPI environment```
+   // Initialize the MPI environment
         MPI_Init(NULL, NULL);
         // Get the number of processes
         int world_size;
@@ -139,7 +140,8 @@ Open Grid Scheduler/Condor cheat sheet:
                processor_name, world_rank, world_size);
         // Finalize the MPI environment.
         MPI_Finalize();
-    }```
+    }
+```
     
 3. Compile the file `test.c` in `test.out`
 
