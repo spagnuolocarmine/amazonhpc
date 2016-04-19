@@ -129,7 +129,7 @@ MASTER_INSTANCE_TYPE = t2.micro
 # list of volumes to attach to the master node (OPTIONAL)
 # these volumes, if any, will be NFS shared to the worker nodes
 # see "Configuring EBS Volumes" below on how to define volume sections
-VOLUMES = hpcdata
+#VOLUMES = hpcdata
 
 # list of plugins to load after StarCluster's default setup routines (OPTIONAL)
 # see "Configuring StarCluster Plugins" below on how to define plugin sections
@@ -186,8 +186,8 @@ VOLUMES = hpcdata
 [volume hpcdata]
 # attach vol-c9999999 to /home on master node and NFS-shre to worker nodes
 # create a volume and use the id to have NFS sharing
-VOLUME_ID = vol-b5d9821d
-MOUNT_PATH = /home
+#VOLUME_ID = vol-b5d9821d
+#MOUNT_PATH = /home
 
 # Same volume as above, but mounts to different location
 # [volume biodata2]

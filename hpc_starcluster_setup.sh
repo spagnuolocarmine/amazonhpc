@@ -40,7 +40,8 @@ sudo easy_install StarCluster
 mkdir ~/.starcluster
 
 rm -f ~/.starcluster/config
-wget -P ~/.starcluster/ https://raw.githubusercontent.com/isislab-unisa/amazonhpc/master/config
+cp config ~/.starcluster/config
+#wget -P ~/.starcluster/ https://raw.githubusercontent.com/isislab-unisa/amazonhpc/master/config
 
 uncomment() {
     sed -i "s/^# $1/$1/g" ~/.starcluster/config
