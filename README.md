@@ -12,7 +12,7 @@ This project allows the user to easy install and start a HPC cluster on Amazonâ€
 Connect to  [Security Credentials Amazon console](https://console.aws.amazon.com/iam/home?region=us-east-1#security_credential).
 
 - Users -> Create New Users -> Enter User Name -> Create
-- Users -> Select the user -> Attacj Policy -> AmazonEC2FullAcces
+- Users -> Select the user -> Attach Policy -> AmazonEC2FullAcces
 - Users -> Select the user -> Security Credentials -> Create Access Key -> Download Credentials.csv
 
 
@@ -39,6 +39,7 @@ Copy the credentials.csv on the machine.
 Downloads the script and the config file.
 
 ```wget https://raw.githubusercontent.com/spagnuolocarmine/amazonhpc/master/hpc_starcluster_setup.sh```
+
 ```wget https://raw.githubusercontent.com/spagnuolocarmine/amazonhpc/master/config```
 
 Connect through SSH to the "Controller" machine and run the installation script.
