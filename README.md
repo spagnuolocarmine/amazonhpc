@@ -78,7 +78,7 @@ This script use the t2.micro instance of EC2 eligible for free. In the section L
 - terminate: Terminate a running or stopped cluster
 - restart, reboot: Restart an existing cluster
 - listclusters, lc: List all active clusters
-- sshmaster, sm: SSH to a cluster's master node
+- sshmaster, sm: SSH to a cluster's master node (-u sgeadmin)
 - sshnode, sn: SSH to a cluster node
 - put: Copy files to a running cluster
 - get: Copy one or more files from a running cluster to your local machine
