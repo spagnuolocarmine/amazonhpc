@@ -27,10 +27,15 @@ if [ ! -f credentials.csv ];then
 	  echo "6. Copy credentials.csv to your home directory $HOME and run the script again"
 	  exit
 fi
-
+_AWS_ACCESS_KEY_ID=""
+_AWS_SECRET_ACCESS_KEY=""
+_AWS_USER_ID=""
 while IFS="," read f1 f2 f3 
 do 
-   echo "Reading credentials.csv $f1 $f2 $f3" 
+   echo "Reading credentials.csv $f1 $f2 $f3"
+   _AWS_USER_ID=$f1
+   _AWS_ACCESS_KEY_ID=$f2
+   _AWS_SECRET_ACCESS_KEY=$f3
 done < credentials.csv
 
 sudo apt-get update
@@ -52,9 +57,9 @@ setconfig() {
 }
 
 
-setconfig AWS_ACCESS_KEY_ID $f2
-setconfig AWS_SECRET_ACCESS_KEY $f3
-setconfig AWS_USER_ID ${f1//\"/}
+setconfig AWS_ACCESS_KEY_ID $_AWS_ACCESS_KEY_ID
+setconfig AWS_SECRET_ACCESS_KEY $_AWS_SECRET_ACCESS_KEY
+setconfig AWS_USER_ID ${_AWS_USER_ID//\"/}
 
 
 if [[ $(starcluster lk) =~ "isislabamazonhpckey" ]];then
