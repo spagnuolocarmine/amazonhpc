@@ -34,7 +34,7 @@ do
 done < credentials.csv
 
 sudo apt-get update
-sudo apt-get -y install build-essential python-dev python-setuptools mc
+sudo apt-get -y install build-essential python-dev python-setuptools mc libssl-dev libffi-dev
 sudo easy_install StarCluster
 
 mkdir ~/.starcluster
