@@ -25,7 +25,7 @@ Launch new t2.micro istance of Ubuntu machine.
 - Instances -> Launch Instance -> Select Ubuntu Server -> Select t2.micro (Free tier eligible) -> Review and Launch -> Create new keypair ssh access (store it and don't lost) -> Launch
 
 
-Connect to the remote machine.
+Connect to the remote machine (start on N.Virginia).
 
 - Instances -> Select the created machine -> Edit the Name field, naming this machine "Controller"
 - Right click on the machine and select connect, follow the suggested steps.
