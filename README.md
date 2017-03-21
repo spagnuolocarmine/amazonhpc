@@ -35,6 +35,11 @@ Connect to the remote machine.
 Copy the credentials.csv on the machine.
 
 ```scp -i "test.pem" credentials.csv ubuntu@ec2-54-86-81-206.compute-1.amazonaws.com:```
+Add to credentials.csv
+
+AWS Account ID,Access key ID,Secret access key
+ID,X,Y
+You can find ID in My Security Credentials->Account Identifiers
 
 Downloads the script and the config file.
 
@@ -57,7 +62,7 @@ Connect through SSH to the "Controller" machine and run the installation script.
 ``` startcluster terminate test ```
 
 
-####How to change the size of the cluster?
+#### How to change the size of the cluster?
 
 In the config file change the variable ```CLUSTER_SIZE ```.
 
