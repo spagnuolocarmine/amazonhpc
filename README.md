@@ -122,11 +122,11 @@ Open Grid Scheduler/Condor cheat sheet:
   * qconf - configure Open Grid Scheduler system
 
 
-###Basic Test installation with OpenMPI
+### Basic Test installation with OpenMPI
 
 1. Connect to the master of the HPC cluster from Controller machine.
 
-```starcluster sshmaster test```
+```starcluster sshmaster -u sgeadmin test```
 
 
 2. Create the file test.c
