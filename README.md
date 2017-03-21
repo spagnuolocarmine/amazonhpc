@@ -2,13 +2,13 @@
 
 This project allows the user to easy install and start a HPC cluster on Amazon’s Elastic Compute Cloud (EC2).
 
-##Requirements
+## Requirements
 - Amazon AWS account (https://console.aws.amazon.com/)
 - Second user Amazon AWS with AmazonEC2FullAccess
 
-##Amazon account settings
+## Amazon account settings
 
-####Create new user
+#### Create new user
 Connect to  [Security Credentials Amazon console](https://console.aws.amazon.com/iam/home?region=us-east-1#security_credential).
 
 - Users -> Create New Users -> Enter User Name -> Create
@@ -16,7 +16,7 @@ Connect to  [Security Credentials Amazon console](https://console.aws.amazon.com
 - Users -> Select the user -> Security Credentials -> Create Access Key -> Download Credentials.csv
 
 
-####Start a new cluster
+#### Start a new cluster
 
 Connect to  [AWS Amazon console for N. Virginia](https://console.aws.amazon.com/ec2/v2/home?region=us-east-1).
 
@@ -61,7 +61,7 @@ Connect through SSH to the "Controller" machine and run the installation script.
 In the config file change the variable ```CLUSTER_SIZE ```.
 
 
-####How many nodes could we run?
+#### How many nodes could we run?
 
 This script use the t2.micro instance of EC2 eligible for free. In the section Limits you can see the maximum number of instances that is possible to run (default is 20). Is possible to require the limit increase to the Amazon support. With basic account you can use the t2.micro instance, but if you are student you can ask for some credits to run other kind of instances.
 
@@ -78,7 +78,7 @@ This script use the t2.micro instance of EC2 eligible for free. In the section L
 - get: Copy one or more files from a running cluster to your local machine
 
 
-##Each node are equipped with
+## Each node are equipped with
 
 StarCluster Ubuntu 12.04 AMI
 
